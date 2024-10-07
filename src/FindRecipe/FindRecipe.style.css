@@ -1,0 +1,50 @@
+.text-containers {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.containers {
+  display: flex;
+}
+.text-containers div {
+  font-family: "Inter", sans-serif;
+}
+.text-containers {
+  width: 100%;
+}
+.videoContainer {
+  position: absolute;
+}
+.heartContainer {
+  position: relative;
+}
+/* FindRecipe.style.css 파일에 추가 */
+
+input::placeholder {
+  color: #999999 !important; /* 원하는 색상으로 변경 */
+  opacity: 1; /* 기본적으로 일부 브라우저에서 투명도가 적용되므로, 불투명하게 만듦 */
+}
+
+/* Firefox 전용 */
+input::-moz-placeholder {
+  color: #999999 !important; /* 원하는 색상으로 변경 */
+  opacity: 1;
+}
+
+/* Internet Explorer 전용 */
+input:-ms-input-placeholder {
+  color: #999999 !important; /* 원하는 색상으로 변경 */
+  opacity: 1;
+}
+
+/* Edge 브라우저 전용 */
+input::-ms-input-placeholder {
+  color: #999999 !important; /* 원하는 색상으로 변경 */
+  opacity: 1;
+}
+
+/* Webkit 브라우저 (Chrome, Safari 등) 전용 */
+input::-webkit-input-placeholder {
+  color: #999999 !important; /* 원하는 색상으로 변경 */
+  opacity: 1;
+}

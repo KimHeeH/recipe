@@ -1,0 +1,41 @@
+.image-container {
+  margin-top: 50px;
+  display: flex;
+  width: 28%;
+  margin-left: 5%;
+}
+.image-container img {
+  cursor: pointer;
+  width: 150px;
+  margin: 5px;
+}
+.navbar-container {
+  display: flex;
+}
+.menu-container {
+  display: flex;
+  margin-top: 60px;
+}
+.menu-container div {
+  color: #7e7e7e;
+  font-weight: 800;
+  margin: 15px;
+  font-size: 20px;
+  flex-direction: row;
+}
+.menu-container div:hover {
+  color: rgb(241, 93, 24);
+  cursor: pointer;
+}
+.login-container {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  display: flex;
+}
+.login-container div {
+  margin: 10px;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
