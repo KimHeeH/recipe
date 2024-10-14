@@ -1,0 +1,25 @@
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+button {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(100, 100, 100); /* 텍스트 색상 설정 */
+}
+.description {
+  color: rgb(189, 189, 189);
+}
+@media (max-width: 600px) {
+  .description {
+    font-size: 0.8rem;
+  }
+}

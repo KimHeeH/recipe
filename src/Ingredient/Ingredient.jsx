@@ -81,7 +81,14 @@ const Ingredient = () => {
   return (
     <div className="container">
       <div
-        style={{ marginLeft: "30px", display: "flex", marginBottom: "40px" }}
+        className="add-button-container"
+        style={{
+          marginLeft: "30px",
+          display: "flex",
+          marginBottom: "40px",
+          marginTop: "30px",
+          borderTop: "1px solid #D9D9D9",
+        }}
       >
         <div style={{ marginRight: "30px", marginTop: "30px" }}>
           <h5>나의 재료 ({itemCount})</h5> {/* 항목 수를 표시 */}
@@ -89,6 +96,7 @@ const Ingredient = () => {
         <Button
           onClick={() => setShowModal(true)}
           variant="outline-dark"
+          className="add-button"
           style={{
             width: "96px",
             height: "40px",
@@ -102,8 +110,8 @@ const Ingredient = () => {
         </Button>
       </div>
 
-      <Container style={{ marginTop: "30px", borderTop: "1px solid #D9D9D9" }}>
-        <Row>
+      <Container>
+        <Row className="justify-content-center">
           {ingredients.map((ingredient) => (
             <Col
               className="item"

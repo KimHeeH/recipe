@@ -6,9 +6,7 @@
 .containers {
   display: flex;
 }
-.text-containers div {
-  font-family: "Inter", sans-serif;
-}
+
 .text-containers {
   width: 100%;
 }
@@ -47,4 +45,39 @@ input::-ms-input-placeholder {
 input::-webkit-input-placeholder {
   color: #999999 !important; /* 원하는 색상으로 변경 */
   opacity: 1;
+}
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+button {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(100, 100, 100); /* 텍스트 색상 설정 */
+}
+/* For smaller screens (max-width: 600px), adjust input and button layout */
+@media (max-width: 600px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input {
+    width: 100%; /* Make input take full width */
+    margin-bottom: 10px; /* Add some space between input and button */
+  }
+
+  .search-container button {
+    width: 100%; /* Make button take full width */
+  }
 }

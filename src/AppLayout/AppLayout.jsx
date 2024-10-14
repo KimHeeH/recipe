@@ -26,10 +26,6 @@ const AppLayout = () => {
           <div onClick={() => goPage("findrecipe")}>레시피 찾기</div>
           <div onClick={() => goPage("ingredient")}>재료관리</div>
         </div>
-        <div className="login-container">
-          <div>로그인</div>
-          <div>회원가입</div>
-        </div>
       </div>
       <Outlet />
     </div>

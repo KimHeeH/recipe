@@ -6,7 +6,7 @@ import axios from "axios";
 import "./FindRecipe.style.css";
 import TrueHeart from "./img/TrueHeart.png";
 import FalseHeart from "./img/FalseHeart.png";
-
+import "./FindRecipe.style.css";
 AWS.config.update({
   region: process.env.REACT_APP_AWS_REGION,
   accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
@@ -42,6 +42,7 @@ const FindRecipe = () => {
 
   const toggleLike = async (id) => {
     // 현재 비디오의 하트 상태를 토글
+    console.log(id);
     setHeartStates((prevStates) => ({
       ...prevStates,
       [id]: !prevStates[id], // 현재 비디오 ID에 대한 하트 상태를 토글
@@ -100,36 +101,39 @@ const FindRecipe = () => {
         >
           <Col lg={4} className="text-center">
             <div className="text-containers" style={{ marginBottom: "20px" }}>
-              <div style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+              <div style={{ fontSize: "1.2rem", fontWeight: 600 }}>
                 찾으시는 레시피가 있으시나요?
               </div>
-              <div style={{ fontWeight: "500", color: "#878787" }}>
-                식재료로 레시피를 검색해보세요
-              </div>
+              <div style={{}}>식재료로 레시피를 검색해보세요</div>
             </div>
-            <div style={{ display: "flex" }}>
+            <div
+              style={{ display: "flex", justifyContent: "center" }}
+              className="search-container"
+            >
               <input
                 type="text"
                 className="form-control"
                 placeholder="예) 토마토 파스타"
-                style={{ width: "100%", maxWidth: "300px", margin: "0 auto" }}
+                style={{
+                  width: "100%",
+                  maxWidth: "300px",
+                  marginRight: "10px",
+                }}
                 onChange={(e) => {
                   const value = e.target.value;
                   setInputValue(value);
                 }}
               />
-              <div style={{ marginTop: "5px" }}>
-                <Button
-                  variant="secondary"
-                  style={{
-                    backgroundColor: "rgb(241, 93, 24)",
-                    border: "none",
-                  }}
-                  onClick={searchRecipe}
-                >
-                  검색
-                </Button>
-              </div>
+              <Button
+                variant="secondary"
+                style={{
+                  backgroundColor: "rgb(241, 93, 24)",
+                  border: "none",
+                }}
+                onClick={searchRecipe}
+              >
+                검색
+              </Button>
             </div>
           </Col>
         </Row>
@@ -184,9 +188,13 @@ const FindRecipe = () => {
 
         {/* 두 번째 Row */}
         <Row className="justify-content-center">
-          <h5 style={{ marginBottom: "50px" }}>
-            나의 재료 {ingredients.length}
-          </h5>
+          <div style={{ marginTop: "30px", borderTop: "1px solid #D9D9D9" }}>
+            <div style={{ marginTop: "30px" }}>
+              <h5 style={{ marginBottom: "50px" }}>
+                나의 재료 {ingredients.length}
+              </h5>
+            </div>
+          </div>
           {ingredients.map((ingredient) => (
             <Col
               className="item"

@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import YouTube from "react-youtube";
 import axios from "axios";
+import "./Recommended.style.css";
 const Recommended = () => {
   const [popularVideo, setPopularVideo] = useState([]);
+  const toggleLike = () => {};
   useEffect(() => {
     const fetchPopularRecipes = async () => {
       try {
@@ -47,7 +49,7 @@ const Recommended = () => {
       >
         <div style={{ marginTop: "30px", marginBottom: "30px" }}>
           <h2>추천 레시피</h2>
-          <p style={{ color: "#555", fontSize: "16px" }}>
+          <p className="descripition" style={{ fontSize: "18px" }}>
             조회수를 기준으로 선정된 인기 많은 요리 영상입니다. 다양한 레시피를
             통해 맛있는 음식을 만들어 보세요!
           </p>
@@ -55,11 +57,20 @@ const Recommended = () => {
 
         {popularVideo.map((video, index) => (
           <div key={video.videoId} style={{ display: "flex" }}>
-            <div>
+            <div style={{ marginBottom: "30px" }}>
               <YouTube
                 videoId={video.videoId} // 여기서도 video.videoId로 수정
                 opts={{ width: "100%", height: "210px" }}
               />
+              <div
+                onClick={() => toggleLike()}
+                style={{
+                  position: "absolute",
+                  bottom: "15px",
+                  right: "20px",
+                  cursor: "pointer",
+                }}
+              ></div>
             </div>
             <div
               style={{
@@ -73,6 +84,7 @@ const Recommended = () => {
                 maxWidth: "600px",
                 whiteSpace: "normal",
                 padding: "50px",
+                marginLeft: "30px",
               }}
             >
               {video.title}

@@ -1,3 +1,8 @@
 @media (forced-colors: active) {
   /* 스타일을 새 표준에 맞게 설정 */
 }
+@media (max-width: 600px) {
+  .Mydescription {
+    font-size: 0.8rem;
+  }
+}

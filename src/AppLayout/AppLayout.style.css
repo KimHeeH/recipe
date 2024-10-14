@@ -37,5 +37,35 @@
   margin: 10px;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
+}
+/* 모바일 화면 (최대 너비 768px 이하일 때) */
+@media only screen and (max-width: 768px) {
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%; /* 모바일 환경에서 이미지를 전체 너비에 맞춤 */
+    height: 60px;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column; /* 네비게이션 바를 세로로 나열 */
+    align-items: center; /* 가운데 정렬 */
+  }
+
+  .menu-container div {
+    margin: 10px 0; /* 메뉴 간의 간격 조정 */
+    font-size: 1rem; /* 모바일에서 메뉴 폰트 크기를 적절하게 조절 */
+  }
+
+  .navbar-container {
+    flex-direction: column; /* 네비게이션과 로고를 세로로 배치 */
+    align-items: center; /* 중앙 정렬 */
+  }
 }

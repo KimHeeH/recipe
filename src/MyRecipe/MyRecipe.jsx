@@ -67,7 +67,10 @@ const MyRecipe = () => {
       >
         <div style={{ marginTop: "30px", marginBottom: "30px" }}>
           <h2>나의 레시피 ({myRecipe.length})</h2>
-          <p style={{ color: "#555", fontSize: "16px" }}>
+          <p
+            className="Mydescription"
+            style={{ color: "#555", fontSize: "16px" }}
+          >
             내가 좋아요한 요리 영상들입니다. 마음에 드는 레시피를 저장하고,
             언제든지 다시 확인해보세요!
           </p>

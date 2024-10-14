@@ -25,10 +25,10 @@ const Homepage = () => {
       >
         <div className="text-container">
           <div>
-            <h2>신선한 재료로 완벽한 요리를!</h2>
+            <h2 className="font">신선한 재료로 완벽한 요리를!</h2>
           </div>
           <div>
-            <h2>레시피 추천을 받아보세요</h2>
+            <h2 className="font">레시피 추천을 받아보세요</h2>
           </div>
         </div>
       </div>
